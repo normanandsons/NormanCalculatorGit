@@ -1,0 +1,6 @@
+docker image ls
+docker build -t normanandsonsdocker/normancalculator .
+docker run -d -p 8081:80 --name mycalculator1 normanandsonsdocker/normancalculator
+docker run -d -p 8082:80 --name mycalculator2 normanandsonsdocker/normancalculator
+docker run -d -p 8083:80 --name mycalculator3 normanandsonsdocker/normancalculator
+docker ps -a

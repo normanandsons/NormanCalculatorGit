@@ -1,9 +1,0 @@
-az login 
-
-az account set --subscription 4e516dda-f21d-47c1-9ac6-b5db83292518
-
-az acr build --image "normancalculator:v1" \
-    --registry acrNormanCalculator \
-    --file Dockerfile . 
-
-  

@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: normancalculator 
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: normancalculator
+  template:
+    metadata:
+      labels:
+        app: normancalculator 
+    spec:
+      containers:
+        - name: normancalculator
+          image: acrnormancalculator.azurecr.io/normancalculator:v1
+          ports:
+          - containerPort: 80
+          resources:
+            requests:
+              cpu: "12m"
+              memory: "70Mi"
+            limits:
+              cpu: "15m"
+              memory: "90Mi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+    name: normancalculator
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 80 
+    selector:
+        app: normancalculator

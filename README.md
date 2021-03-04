@@ -1,1 +1,0 @@
-Normancalculator GIT sample 

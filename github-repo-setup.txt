@@ -1,0 +1,33 @@
+git init
+
+git add .
+
+git commit -m "initial commit"
+
+git remote add origin git@github.com:solaadio/NormanCalculatorDemoGit.git
+
+git remote -v
+
+git push --force origin master
+
+git branch --set-upstream-to=origin/master master
+
+
+
+
+Create Azure DevOps Project
+
+Create PAT on GitHub
+
+Use GitHub PAT to Create GitHub connection
+
+Create namespaces & resources
+dev.dev
+qa.qa
+Staging.staging
+prod.prod
+NormanCalculatorDemo.dev
+NormanCalculatorDemo.default
+
+
+

@@ -37,26 +37,26 @@ namespace NormanCalculator.Controllers
             return responseObject;
         }
 
-        // [HttpGet]
-        // [Route("Subtract")]
-        // public async Task<ResponseObject> SubtractNumbers(string input1, string input2)
-        // {
-        //     var responseObject = new ResponseObject();
-        //     try
-        //     {
-        //         var number1 = double.Parse(input1);
-        //         var number2 = double.Parse(input2);
+        [HttpGet]
+        [Route("Subtract")]
+        public async Task<ResponseObject> SubtractNumbers(string input1, string input2)
+        {
+            var responseObject = new ResponseObject();
+            try
+            {
+                var number1 = double.Parse(input1);
+                var number2 = double.Parse(input2);
 
-        //         await Task.Run(() => responseObject.Result = (number1 - number2).ToString());
-        //         _logger.LogInformation("[{0}]: {1} - {2} = {3}", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), input1, input2, responseObject.Result );
-        //     }
-        //     catch (Exception exception)
-        //     {
-        //         await Task.Run(() => responseObject.Result = exception.Message);
-        //         _logger.LogError("[{0}]: Crap info sent through {1} and {2}", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), input1, input2 );
-        //     }
-        //     return responseObject;
-        // }
+                await Task.Run(() => responseObject.Result = (number1 - number2).ToString());
+                _logger.LogInformation("[{0}]: {1} - {2} = {3}", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), input1, input2, responseObject.Result );
+            }
+            catch (Exception exception)
+            {
+                await Task.Run(() => responseObject.Result = exception.Message);
+                _logger.LogError("[{0}]: Crap info sent through {1} and {2}", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), input1, input2 );
+            }
+            return responseObject;
+        }
     
     }
 }

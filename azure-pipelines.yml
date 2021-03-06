@@ -23,7 +23,7 @@ variables:
   imageRepository: 'normancalculator'
   containerRegistry: 'acrnormancalculator.azurecr.io'
   dockerfilePath: '**/Dockerfile'
-  tag: 'git$(Build.BuildNumber)'
+  tag: 'git-$(Build.BuildNumber)'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'

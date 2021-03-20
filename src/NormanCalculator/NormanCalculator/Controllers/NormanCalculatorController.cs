@@ -35,6 +35,7 @@ namespace NormanCalculator.Controllers
                 _logger.LogError("[{0}]: Invalid info sent through {1} and {2}", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), input1, input2 );
             }
             return responseObject;
+            
         }
 
         // [HttpGet]
